@@ -1,15 +1,14 @@
 import React, { useContext } from 'react';
-import {
-  StyleSheet,
-  ScrollView,
-  TouchableOpacity,
-  View,
-  Text,
-} from 'react-native';
+import { StyleSheet, ScrollView, View } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
 import { useNavigation } from '@react-navigation/native';
 // files - components
 import Header from '../components/Header';
+import DealsSearch from '../components/DealsSearch';
+import DealsLangkah from '../components/DealsLangkah';
+import DealsCashback from '../components/DealsCashback';
+import DealsKebahagiaan from '../components/DealsKebahagiaan';
+import DealsList from '../components/DealsList';
 import Colors from '../constants/Colors';
 import { ThemeContext } from '../contexts/ThemeContext';
 
@@ -31,19 +30,24 @@ export default function DealsScreen({ navigator }) {
 
       {/* content */}
       <View style={styles.content}>
-        <ScrollView style={styles.scrollview}>
-          <TouchableOpacity onPress={() => navigate('Home')}>
-            <Text>To Home</Text>
-          </TouchableOpacity>
-          <TouchableOpacity onPress={() => navigate('Scan')}>
-            <Text>To Scan</Text>
-          </TouchableOpacity>
-          <TouchableOpacity onPress={() => navigate('Finance')}>
-            <Text>To Finance</Text>
-          </TouchableOpacity>
-          <TouchableOpacity onPress={() => navigate('Profile')}>
-            <Text>To Profile</Text>
-          </TouchableOpacity>
+        <ScrollView
+          style={styles.scrollview}
+          showsVerticalScrollIndicator={false}
+        >
+          {/* deals search */}
+          <DealsSearch />
+
+          {/* deals langkah */}
+          <DealsLangkah />
+
+          {/* deals cashback */}
+          <DealsCashback />
+
+          {/* deals kebahagiaan */}
+          <DealsKebahagiaan />
+
+          {/* deals list */}
+          <DealsList />
         </ScrollView>
       </View>
     </View>
@@ -52,7 +56,5 @@ export default function DealsScreen({ navigator }) {
 
 const styles = StyleSheet.create({
   content: {},
-  scrollView: {
-    padding: 100,
-  },
+  scrollView: {},
 });

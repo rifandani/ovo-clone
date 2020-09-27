@@ -43,7 +43,7 @@ export default HomeTransfer;
 
 const styles = StyleSheet.create({
   transferContainer: {
-    backgroundColor: Colors.light,
+    backgroundColor: 'white',
     paddingHorizontal: -(deviceWidth / 5),
     paddingVertical: deviceWidth / 27,
     marginTop: -(deviceHeight / 20),

@@ -1,24 +1,15 @@
 import React, { useContext } from 'react';
-import {
-  StyleSheet,
-  ScrollView,
-  View,
-  Text,
-  TouchableOpacity,
-} from 'react-native';
+import { StyleSheet, ScrollView, View } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { StatusBar } from 'expo-status-bar';
-import { LinearGradient } from 'expo-linear-gradient';
-import { Entypo } from '@expo/vector-icons';
-import { Card } from 'react-native-paper';
 // files - components
 import Header from '../components/Header';
 import HomeCash from '../components/HomeCash';
 import HomeTransfer from '../components/HomeTransfer';
 import HomeService from '../components/HomeService';
+import HomePromo from '../components/HomePromo';
 import HomeMenarik from '../components/HomeMenarik';
 import Colors from '../constants/Colors';
-import { deviceHeight, deviceWidth } from '../constants/Dimensions';
 import { ThemeContext } from '../contexts/ThemeContext';
 
 export default function HomeScreen({ navigator }) {
@@ -56,9 +47,7 @@ export default function HomeScreen({ navigator }) {
           <View style={styles.divider}></View>
 
           {/* promo */}
-          <View style={styles.promoContainer}>
-            <View style={styles.promo}></View>
-          </View>
+          <HomePromo />
 
           {/* divider */}
           <View style={styles.divider}></View>
@@ -77,12 +66,5 @@ const styles = StyleSheet.create({
   divider: {
     height: 10,
     backgroundColor: '#e9ecef',
-  },
-  promoContainer: {
-    height: deviceHeight / 2.9,
-    padding: 20,
-  },
-  promo: {
-    backgroundColor: 'cyan',
   },
 });

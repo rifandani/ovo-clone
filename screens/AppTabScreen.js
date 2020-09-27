@@ -10,11 +10,11 @@ import FinanceScreen from './FinanceScreen';
 import ProfileScreen from './ProfileScreen';
 import Colors from '../constants/Colors';
 
-const FinanceTab = createBottomTabNavigator();
+const AppTab = createBottomTabNavigator();
 
-export default function FinanceTabScreen() {
+export default function AppTabScreen() {
   return (
-    <FinanceTab.Navigator
+    <AppTab.Navigator
       initialRouteName="Home"
       tabBarOptions={{
         activeTintColor: Colors.primary,
@@ -58,12 +58,12 @@ export default function FinanceTabScreen() {
         },
       })}
     >
-      <FinanceTab.Screen name="Home" component={HomeScreen} />
-      <FinanceTab.Screen name="Deals" component={DealsScreen} />
-      <FinanceTab.Screen name="Scan" component={ScanScreen} />
-      <FinanceTab.Screen name="Finance" component={FinanceScreen} />
-      <FinanceTab.Screen name="Profile" component={ProfileScreen} />
-    </FinanceTab.Navigator>
+      <AppTab.Screen name="Home" component={HomeScreen} />
+      <AppTab.Screen name="Deals" component={DealsScreen} />
+      <AppTab.Screen name="Scan" component={ScanScreen} />
+      <AppTab.Screen name="Finance" component={FinanceScreen} />
+      <AppTab.Screen name="Profile" component={ProfileScreen} />
+    </AppTab.Navigator>
   );
 }
 

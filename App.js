@@ -6,7 +6,7 @@ import 'react-native-gesture-handler';
 // files - components
 import IntroScreen from './screens/IntroScreen';
 // import WelcomeScreen from './screens/WelcomeScreen';
-import FinanceTabScreen from './screens/FinanceTabScreen';
+import AppTabScreen from './screens/AppTabScreen';
 import { ThemeProvider } from './contexts/ThemeContext';
 
 const AppStack = createStackNavigator();
@@ -23,7 +23,7 @@ export default function App() {
           <AppStack.Navigator initialRouteName="Intro" headerMode="none">
             <AppStack.Screen name="Intro" component={IntroScreen} />
             {/* <AppStack.Screen name="Welcome" component={WelcomeScreen} /> */}
-            <AppStack.Screen name="Finance" component={FinanceTabScreen} />
+            <AppStack.Screen name="App" component={AppTabScreen} />
           </AppStack.Navigator>
         </NavigationContainer>
       </PaperProvider>

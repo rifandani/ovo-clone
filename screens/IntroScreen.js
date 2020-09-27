@@ -67,7 +67,7 @@ const IntroScreen = () => {
   };
 
   const onDone = () => {
-    navigate('Finance');
+    navigate('App');
   };
 
   return (
