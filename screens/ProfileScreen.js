@@ -1,21 +1,21 @@
 import React, { useContext } from 'react';
-import {
-  StyleSheet,
-  ScrollView,
-  TouchableOpacity,
-  Text,
-  View,
-} from 'react-native';
+import { StyleSheet, ScrollView, View } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
-import { useNavigation } from '@react-navigation/native';
 // files - components
-import Header from '../components/Header';
-import Colors from '../constants/Colors';
 import { ThemeContext } from '../contexts/ThemeContext';
+import { deviceHeight } from '../constants/Dimensions';
+import Colors from '../constants/Colors';
+import Header from '../components/Header';
+import ProfileTop from '../components/ProfileTop';
+import ProfileListItem from '../components/ProfileListItem';
+import ProfileLoyalty from '../components/ProfileLoyalty';
+import ProfileAkun from '../components/ProfileAkun';
+import ProfileKeamanan from '../components/ProfileKeamanan';
+import ProfileTentang from '../components/ProfileTentang';
+import ProfileFooter from '../components/ProfileFooter';
 
 export default function ProfileScreen({ navigator }) {
   const { isDarkMode } = useContext(ThemeContext);
-  const { navigate } = useNavigation();
 
   return (
     <View
@@ -32,18 +32,42 @@ export default function ProfileScreen({ navigator }) {
       {/* content */}
       <View style={styles.content}>
         <ScrollView style={styles.scrollview}>
-          <TouchableOpacity onPress={() => navigate('Home')}>
-            <Text>To Home</Text>
-          </TouchableOpacity>
-          <TouchableOpacity onPress={() => navigate('Deals')}>
-            <Text>To Deals</Text>
-          </TouchableOpacity>
-          <TouchableOpacity onPress={() => navigate('Scan')}>
-            <Text>To Scan</Text>
-          </TouchableOpacity>
-          <TouchableOpacity onPress={() => navigate('Finance')}>
-            <Text>To Finance</Text>
-          </TouchableOpacity>
+          {/* foto akun */}
+          <ProfileTop />
+
+          {/* ovo premier */}
+          <ProfileListItem
+            iconName="checkbox-multiple-marked-circle-outline"
+            text="OVO Premier"
+            showLihatDetail
+          />
+
+          {/* divider */}
+          <View style={styles.divider}></View>
+
+          {/* QR dan Loyalty */}
+          <ProfileLoyalty />
+
+          {/* divider */}
+          <View style={styles.divider}></View>
+
+          {/* akun */}
+          <ProfileAkun />
+
+          {/* divider */}
+          <View style={styles.divider}></View>
+
+          {/* keamanan */}
+          <ProfileKeamanan />
+
+          {/* divider */}
+          <View style={styles.divider}></View>
+
+          {/* tentang */}
+          <ProfileTentang />
+
+          {/* footer */}
+          <ProfileFooter />
         </ScrollView>
       </View>
     </View>
@@ -52,7 +76,10 @@ export default function ProfileScreen({ navigator }) {
 
 const styles = StyleSheet.create({
   content: {},
-  scrollView: {
-    padding: 10,
+  scrollView: {},
+  divider: {
+    height: deviceHeight / 80,
+    width: '100%',
+    backgroundColor: Colors.lightGrey,
   },
 });

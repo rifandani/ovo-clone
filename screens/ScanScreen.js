@@ -1,17 +1,12 @@
 import React, { useContext } from 'react';
-import {
-  StyleSheet,
-  ScrollView,
-  TouchableOpacity,
-  View,
-  Text,
-} from 'react-native';
+import { StyleSheet, ScrollView, View, Text } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
 import { useNavigation } from '@react-navigation/native';
 // files - components
-import Header from '../components/Header';
 import Colors from '../constants/Colors';
+import { deviceHeight } from '../constants/Dimensions';
 import { ThemeContext } from '../contexts/ThemeContext';
+import Header from '../components/Header';
 
 export default function ScanScreen({ navigator }) {
   const { isDarkMode } = useContext(ThemeContext);
@@ -32,18 +27,7 @@ export default function ScanScreen({ navigator }) {
       {/* content */}
       <View style={styles.content}>
         <ScrollView style={styles.scrollview}>
-          <TouchableOpacity onPress={() => navigate('Home')}>
-            <Text>To Home</Text>
-          </TouchableOpacity>
-          <TouchableOpacity onPress={() => navigate('Deals')}>
-            <Text>To Deals</Text>
-          </TouchableOpacity>
-          <TouchableOpacity onPress={() => navigate('Finance')}>
-            <Text>To Finance</Text>
-          </TouchableOpacity>
-          <TouchableOpacity onPress={() => navigate('Profile')}>
-            <Text>To Profile</Text>
-          </TouchableOpacity>
+          <Text>Scan screen</Text>
         </ScrollView>
       </View>
     </View>
