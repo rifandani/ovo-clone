@@ -1,16 +1,15 @@
 import React, { useContext } from 'react';
-import { StyleSheet, ScrollView, View, Text } from 'react-native';
+import { StyleSheet, View, Text } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
-import { useNavigation } from '@react-navigation/native';
 // files - components
 import Colors from '../constants/Colors';
 import { deviceHeight } from '../constants/Dimensions';
 import { ThemeContext } from '../contexts/ThemeContext';
 import Header from '../components/Header';
+import ScanQR from '../components/ScanQR';
 
 export default function ScanScreen({ navigator }) {
   const { isDarkMode } = useContext(ThemeContext);
-  const { navigate } = useNavigation();
 
   return (
     <View
@@ -24,19 +23,13 @@ export default function ScanScreen({ navigator }) {
       {/* header */}
       <Header title="Scan" />
 
-      {/* content */}
-      <View style={styles.content}>
-        <ScrollView style={styles.scrollview}>
-          <Text>Scan screen</Text>
-        </ScrollView>
-      </View>
+      {/* scanner */}
+      <ScanQR />
     </View>
   );
 }
 
 const styles = StyleSheet.create({
   content: {},
-  scrollView: {
-    padding: 100,
-  },
+  scrollView: {},
 });

@@ -6,11 +6,28 @@ import Colors from '../constants/Colors';
 import { deviceHeight, deviceWidth } from '../constants/Dimensions';
 import { ThemeContext } from '../contexts/ThemeContext';
 
+const promoData = [
+  {
+    imgSource: require('../assets/promo1.png'),
+  },
+  {
+    imgSource: require('../assets/promo2.png'),
+  },
+  {
+    imgSource: require('../assets/promo3.png'),
+  },
+];
+
 const HomePromo = () => {
   const { isDarkMode } = useContext(ThemeContext);
 
   return (
-    <View style={styles.promoContainer}>
+    <View
+      style={{
+        ...styles.promoContainer,
+        backgroundColor: isDarkMode ? Colors.dark : 'white',
+      }}
+    >
       {/* Title */}
       <View style={styles.firstRow}>
         <Text
@@ -34,20 +51,16 @@ const HomePromo = () => {
         activeDotColor={Colors.success}
         paginationStyle={styles.paginationStyle}
       >
-        <View style={styles.slide1}>
-          <Image
-            style={styles.slideImg}
-            source={require('../assets/covid.png')}
-            resizeMode="contain"
-          />
-        </View>
-        <View style={styles.slide2}>
-          <Image
-            style={styles.slideImg}
-            source={require('../assets/help.png')}
-            resizeMode="contain"
-          />
-        </View>
+        {promoData &&
+          promoData.map((el, i) => (
+            <View style={styles.slide} key={i}>
+              <Image
+                style={styles.slideImg}
+                source={el.imgSource}
+                resizeMode="contain"
+              />
+            </View>
+          ))}
       </Swiper>
     </View>
   );
@@ -82,12 +95,7 @@ const styles = StyleSheet.create({
   paginationStyle: {
     bottom: 0,
   },
-  slide1: {
-    flex: 1,
-    justifyContent: 'space-between',
-    alignItems: 'center',
-  },
-  slide2: {
+  slide: {
     flex: 1,
     justifyContent: 'space-between',
     alignItems: 'center',
@@ -96,6 +104,6 @@ const styles = StyleSheet.create({
     height: deviceHeight / 4.7,
     width: deviceWidth / 1,
     borderRadius: 10,
-    transform: [{ scaleX: 1.5 }],
+    transform: [{ scaleX: 1.2 }],
   },
 });

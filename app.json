@@ -1,21 +1,22 @@
 {
   "expo": {
-    "name": "BukuWarung",
-    "slug": "BukuWarung",
+    "name": "OVOClone",
+    "slug": "OVOClone",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "./assets/ovo.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#4c2a86"
+    },
+    "androidStatusBar": {
+      "barStyle": "light-content"
     },
     "updates": {
       "fallbackToCacheTimeout": 0
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "ios": {
       "supportsTablet": true
     },

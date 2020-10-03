@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { StyleSheet, Text, View, Image } from 'react-native';
+import { StyleSheet, Text, View, Image, ImageBackground } from 'react-native';
 import { Entypo } from '@expo/vector-icons';
 
 import Colors from '../constants/Colors';
@@ -16,7 +16,16 @@ const DealsLangkah = () => {
         backgroundColor: isDarkMode ? Colors.dark : Colors.lightGrey,
       }}
     >
-      <View style={styles.container}>
+      <ImageBackground
+        style={{
+          flex: 1,
+          flexDirection: 'row',
+          alignItems: 'center',
+        }}
+        imageStyle={{ borderRadius: 10 }}
+        source={require('../assets/bg1.png')}
+        resizeMode="cover"
+      >
         {/* gambar */}
         <Image
           style={styles.image}
@@ -37,7 +46,7 @@ const DealsLangkah = () => {
           size={24}
           color="white"
         />
-      </View>
+      </ImageBackground>
     </View>
   );
 };
@@ -46,15 +55,10 @@ export default DealsLangkah;
 
 const styles = StyleSheet.create({
   langkahRoot: {
+    flex: 1,
+    width: '100%',
     height: deviceHeight / 4.7,
     padding: 15,
-  },
-  container: {
-    flex: 1,
-    backgroundColor: Colors.secondary,
-    flexDirection: 'row',
-    alignItems: 'center',
-    borderRadius: 10,
   },
   image: {
     height: 70,

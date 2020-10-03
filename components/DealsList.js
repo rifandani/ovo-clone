@@ -10,7 +10,7 @@ const firstListData = [
   {
     iconName: 'food',
     iconColor: Colors.warning,
-    text: 'Service',
+    text: 'Foods',
   },
   {
     iconName: 'shopping',

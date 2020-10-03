@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { StyleSheet, ScrollView, View } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { StatusBar } from 'expo-status-bar';
@@ -9,6 +9,7 @@ import HomeTransfer from '../components/HomeTransfer';
 import HomeService from '../components/HomeService';
 import HomePromo from '../components/HomePromo';
 import HomeMenarik from '../components/HomeMenarik';
+import HomeModal from '../components/HomeModal';
 import Colors from '../constants/Colors';
 import { ThemeContext } from '../contexts/ThemeContext';
 
@@ -16,11 +17,22 @@ export default function HomeScreen({ navigator }) {
   const { isDarkMode } = useContext(ThemeContext);
   const { navigate } = useNavigation();
 
+  const [renderModal, setRenderModal] = useState(false);
+  useEffect(() => {
+    let timer = setTimeout(() => {
+      setRenderModal(true);
+    }, 2000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+  }, []);
+
   return (
     <View
       style={{
         flex: 1,
-        backgroundColor: isDarkMode ? Colors.dark : Colors.light,
+        backgroundColor: isDarkMode ? Colors.dark : 'white',
       }}
     >
       <StatusBar style="light" />
@@ -54,6 +66,9 @@ export default function HomeScreen({ navigator }) {
 
           {/* menarik */}
           <HomeMenarik />
+
+          {/* ad modal */}
+          {renderModal && <HomeModal />}
         </ScrollView>
       </View>
     </View>

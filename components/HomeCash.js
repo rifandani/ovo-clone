@@ -1,43 +1,46 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-import { LinearGradient } from 'expo-linear-gradient';
+import { StyleSheet, Text, View, ImageBackground } from 'react-native';
 
-import { deviceHeight } from '../constants/Dimensions';
 import Colors from '../constants/Colors';
+import { Bold, Regular } from '../constants/Fonts';
+import { deviceHeight } from '../constants/Dimensions';
 
 const HomeCash = () => {
   return (
-    <LinearGradient
-      style={styles.linearGradient}
-      colors={[Colors.primary, Colors.secondary, Colors.light]}
-    >
-      <Text style={styles.ovoCash}>OVO Cash</Text>
+    <View style={styles.container}>
+      <ImageBackground
+        source={require('../assets/bgHome.png')}
+        style={{ height: deviceHeight / 4.5, paddingLeft: 15, paddingTop: 8 }}
+        imageStyle={{ borderBottomLeftRadius: 30, borderBottomRightRadius: 30 }}
+        resizeMode="stretch"
+      >
+        <Text style={styles.ovoCash}>OVO Cash</Text>
 
-      <View style={styles.rpContainer}>
-        <Text style={styles.rp}>Rp</Text>
-        <Text style={styles.rpDigits}>146.018</Text>
-      </View>
+        <View style={styles.rpContainer}>
+          <Text style={styles.rp}>Rp</Text>
+          <Text style={styles.rpDigits}>146.018</Text>
+        </View>
 
-      <View style={styles.pointsContainer}>
-        <Text style={styles.point}>OVO Points</Text>
-        <Text style={styles.pointDigits}>3.495</Text>
-      </View>
-    </LinearGradient>
+        <View style={styles.pointsContainer}>
+          <Text style={styles.point}>OVO Points</Text>
+          <Text style={styles.pointDigits}>3.495</Text>
+        </View>
+      </ImageBackground>
+    </View>
   );
 };
 
 export default HomeCash;
 
 const styles = StyleSheet.create({
-  linearGradient: {
+  container: {
+    flex: 1,
+    width: '100%',
     height: deviceHeight / 4.5,
-    borderBottomLeftRadius: 30,
-    borderBottomRightRadius: 30,
-    paddingLeft: 15,
   },
   ovoCash: {
     color: Colors.light,
-    fontWeight: '500',
+    fontFamily: Regular,
   },
   rpContainer: {
     flexDirection: 'row',
@@ -45,12 +48,12 @@ const styles = StyleSheet.create({
   },
   rp: {
     color: Colors.light,
-    fontWeight: 'bold',
+    fontFamily: Bold,
     marginRight: 3,
   },
   rpDigits: {
     color: Colors.light,
-    fontWeight: 'bold',
+    fontFamily: Bold,
     fontSize: 22,
   },
   pointsContainer: {
@@ -58,11 +61,11 @@ const styles = StyleSheet.create({
   },
   point: {
     color: Colors.light,
-    fontWeight: '500',
+    fontFamily: Regular,
     marginRight: 3,
   },
   pointDigits: {
     color: 'orange',
-    fontWeight: 'bold',
+    fontFamily: Bold,
   },
 });

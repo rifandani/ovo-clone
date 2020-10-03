@@ -56,7 +56,7 @@ const HomeMenarik = () => {
             Punya kendala atau pertanyaan terkait OVO? Kamu bisa kirim disini
           </Text>
           <TouchableOpacity>
-            <Text style={styles.action}>Lihat Bantuan</Text>
+            <Text style={styles.actionText}>Lihat Bantuan</Text>
           </TouchableOpacity>
         </Card>
         <Card
@@ -81,8 +81,8 @@ const HomeMenarik = () => {
           <Text style={styles.subtitle}>
             Dapatkan Asuransi Covid-19 Bebas Premi
           </Text>
-          <TouchableOpacity>
-            <Text style={styles.action}>Daftar Sekarang</Text>
+          <TouchableOpacity style={styles.actionButton}>
+            <Text style={styles.actionText}>Daftar Sekarang</Text>
           </TouchableOpacity>
         </Card>
       </View>
@@ -130,10 +130,12 @@ const styles = StyleSheet.create({
     color: Colors.grey,
     fontSize: 12,
   },
-  action: {
+  actionButton: {
+    marginTop: 28,
+  },
+  actionText: {
     marginTop: 10,
     textAlign: 'center',
     color: Colors.success,
-    marginBottom: 0,
   },
 });

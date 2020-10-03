@@ -6,6 +6,7 @@ import { AntDesign } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
 
 import Colors from '../constants/Colors';
+import { Bold } from '../constants/Fonts';
 import { ThemeContext } from '../contexts/ThemeContext';
 
 export default function Header({ title, backButton }) {
@@ -64,15 +65,15 @@ const styles = StyleSheet.create({
   },
   title: {
     color: Colors.light,
-    fontWeight: 'bold',
     fontSize: 22,
+    fontFamily: Bold,
     padding: 5,
     textAlignVertical: 'bottom',
   },
   titleWithBackButton: {
     color: Colors.light,
-    fontWeight: 'bold',
     fontSize: 18,
+    fontFamily: Bold,
     padding: 7,
     marginLeft: 5,
   },
