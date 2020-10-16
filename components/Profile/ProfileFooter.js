@@ -1,9 +1,9 @@
 import React, { useContext } from 'react';
 import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 
-import Colors from '../constants/Colors';
-import { deviceHeight } from '../constants/Dimensions';
-import { ThemeContext } from '../contexts/ThemeContext';
+import Colors from '../../constants/Colors';
+import { deviceHeight } from '../../constants/Dimensions';
+import { ThemeContext } from '../../contexts/ThemeContext';
 
 const ProfileFooter = () => {
   const { isDarkMode } = useContext(ThemeContext);

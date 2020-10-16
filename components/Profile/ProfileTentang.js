@@ -1,9 +1,10 @@
 import React, { useContext } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-
-import Colors from '../constants/Colors';
-import { deviceHeight } from '../constants/Dimensions';
-import { ThemeContext } from '../contexts/ThemeContext';
+// files
+import Colors from '../../constants/Colors';
+import { deviceHeight } from '../../constants/Dimensions';
+import { ThemeContext } from '../../contexts/ThemeContext';
+// components
 import ProfileListItem from './ProfileListItem';
 
 const ProfileTentang = () => {

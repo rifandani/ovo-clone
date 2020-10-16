@@ -2,9 +2,9 @@ import React, { useContext } from 'react';
 import { StyleSheet, Text, View, Image, ImageBackground } from 'react-native';
 import { Entypo } from '@expo/vector-icons';
 
-import Colors from '../constants/Colors';
-import { ThemeContext } from '../contexts/ThemeContext';
-import { deviceHeight } from '../constants/Dimensions';
+import Colors from '../../constants/Colors';
+import { ThemeContext } from '../../contexts/ThemeContext';
+import { deviceHeight } from '../../constants/Dimensions';
 
 const DealsLangkah = () => {
   const { isDarkMode } = useContext(ThemeContext);
@@ -23,13 +23,13 @@ const DealsLangkah = () => {
           alignItems: 'center',
         }}
         imageStyle={{ borderRadius: 10 }}
-        source={require('../assets/bg1.png')}
+        source={require('../../assets/bg1.png')}
         resizeMode="cover"
       >
         {/* gambar */}
         <Image
           style={styles.image}
-          source={require('../assets/bulb.png')}
+          source={require('../../assets/bulb.png')}
           resizeMode="contain"
         />
 

@@ -1,18 +1,19 @@
 import React, { useContext } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-
-import Colors from '../constants/Colors';
-import { deviceHeight } from '../constants/Dimensions';
-import { ThemeContext } from '../contexts/ThemeContext';
+// files
+import Colors from '../../constants/Colors';
+import { deviceHeight } from '../../constants/Dimensions';
+import { ThemeContext } from '../../contexts/ThemeContext';
+// components
 import ProfileListItem from './ProfileListItem';
 
-const ProfileAkun = () => {
+const ProfileKeamanan = () => {
   const { isDarkMode } = useContext(ThemeContext);
 
   return (
     <View
       style={{
-        ...styles.ProfileAkunContainer,
+        ...styles.ProfileKeamananContainer,
         backgroundColor: isDarkMode ? Colors.dark : 'white',
       }}
     >
@@ -23,21 +24,19 @@ const ProfileAkun = () => {
           color: isDarkMode ? Colors.light : 'black',
         }}
       >
-        Akun
+        Keamanan
       </Text>
 
-      <ProfileListItem iconName="account-edit" text="Ubah Profil" divider />
-      <ProfileListItem iconName="credit-card-outline" text="My Cards" divider />
-      <ProfileListItem iconName="ticket-percent" text="Kode Promo" />
+      <ProfileListItem iconName="lock" text="Ubah Security Code" />
     </View>
   );
 };
 
-export default ProfileAkun;
+export default ProfileKeamanan;
 
 const styles = StyleSheet.create({
-  ProfileAkunContainer: {
-    height: deviceHeight / 3,
+  ProfileKeamananContainer: {
+    height: deviceHeight / 5.5,
     width: '100%',
     paddingRight: 2,
   },

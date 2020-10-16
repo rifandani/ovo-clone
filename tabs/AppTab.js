@@ -3,11 +3,11 @@ import { StyleSheet } from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { AntDesign, Entypo, FontAwesome } from '@expo/vector-icons';
 // files - components
-import HomeScreen from './HomeScreen';
-import DealsScreen from './DealsScreen';
-import ScanScreen from './ScanScreen';
-import FinanceScreen from './FinanceScreen';
-import ProfileScreen from './ProfileScreen';
+import HomeScreen from '../screens/HomeScreen';
+import DealsScreen from '../screens/DealsScreen';
+import ScanScreen from '../screens/ScanScreen';
+import FinanceScreen from '../screens/FinanceScreen';
+import ProfileScreen from '../screens/ProfileScreen';
 import Colors from '../constants/Colors';
 
 const AppTab = createBottomTabNavigator();

@@ -1,21 +1,19 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { StyleSheet, ScrollView, View } from 'react-native';
-import { useNavigation } from '@react-navigation/native';
 import { StatusBar } from 'expo-status-bar';
-// files - components
+
 import Header from '../components/Header';
-import HomeCash from '../components/HomeCash';
-import HomeTransfer from '../components/HomeTransfer';
-import HomeService from '../components/HomeService';
-import HomePromo from '../components/HomePromo';
-import HomeMenarik from '../components/HomeMenarik';
-import HomeModal from '../components/HomeModal';
+import HomeCash from '../components/Home/HomeCash';
+import HomeTransfer from '../components/Home/HomeTransfer';
+import HomeService from '../components/Home/HomeService';
+import HomePromo from '../components/Home/HomePromo';
+import HomeMenarik from '../components/Home/HomeMenarik';
+import HomeModal from '../components/Home/HomeModal';
 import Colors from '../constants/Colors';
 import { ThemeContext } from '../contexts/ThemeContext';
 
-export default function HomeScreen({ navigator }) {
+export default function HomeScreen() {
   const { isDarkMode } = useContext(ThemeContext);
-  const { navigate } = useNavigation();
 
   const [renderModal, setRenderModal] = useState(false);
   useEffect(() => {
@@ -66,10 +64,10 @@ export default function HomeScreen({ navigator }) {
 
           {/* menarik */}
           <HomeMenarik />
-
-          {/* ad modal */}
-          {renderModal && <HomeModal />}
         </ScrollView>
+
+        {/* ad modal */}
+        {renderModal && <HomeModal />}
       </View>
     </View>
   );

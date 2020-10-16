@@ -1,10 +1,10 @@
 import React, { useContext } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
-
-import Colors from '../constants/Colors';
-import { deviceHeight } from '../constants/Dimensions';
-import { ThemeContext } from '../contexts/ThemeContext';
+// files
+import Colors from '../../constants/Colors';
+import { deviceHeight } from '../../constants/Dimensions';
+import { ThemeContext } from '../../contexts/ThemeContext';
 
 const ProfileListItem = ({ iconName, text, showLihatDetail, divider }) => {
   const { isDarkMode } = useContext(ThemeContext);

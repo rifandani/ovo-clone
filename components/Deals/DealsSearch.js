@@ -2,9 +2,9 @@ import React, { useContext } from 'react';
 import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 import { Entypo } from '@expo/vector-icons';
 
-import Colors from '../constants/Colors';
-import { ThemeContext } from '../contexts/ThemeContext';
-import { deviceHeight, deviceWidth } from '../constants/Dimensions';
+import Colors from '../../constants/Colors';
+import { ThemeContext } from '../../contexts/ThemeContext';
+import { deviceHeight, deviceWidth } from '../../constants/Dimensions';
 
 const DealsSearch = () => {
   const { isDarkMode } = useContext(ThemeContext);

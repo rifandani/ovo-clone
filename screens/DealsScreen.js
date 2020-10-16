@@ -4,11 +4,11 @@ import { StatusBar } from 'expo-status-bar';
 import { useNavigation } from '@react-navigation/native';
 // files - components
 import Header from '../components/Header';
-import DealsSearch from '../components/DealsSearch';
-import DealsLangkah from '../components/DealsLangkah';
-import DealsCashback from '../components/DealsCashback';
-import DealsKebahagiaan from '../components/DealsKebahagiaan';
-import DealsList from '../components/DealsList';
+import DealsSearch from '../components/Deals/DealsSearch';
+import DealsLangkah from '../components/Deals/DealsLangkah';
+import DealsCashback from '../components/Deals/DealsCashback';
+import DealsKebahagiaan from '../components/Deals/DealsKebahagiaan';
+import DealsList from '../components/Deals/DealsList';
 import Colors from '../constants/Colors';
 import { ThemeContext } from '../contexts/ThemeContext';
 

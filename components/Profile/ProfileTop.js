@@ -1,9 +1,9 @@
 import React, { useContext } from 'react';
 import { StyleSheet, Text, View, Image } from 'react-native';
-
-import Colors from '../constants/Colors';
-import { deviceHeight } from '../constants/Dimensions';
-import { ThemeContext } from '../contexts/ThemeContext';
+// files
+import Colors from '../../constants/Colors';
+import { deviceHeight } from '../../constants/Dimensions';
+import { ThemeContext } from '../../contexts/ThemeContext';
 
 const ProfileTop = () => {
   const { isDarkMode } = useContext(ThemeContext);
@@ -17,7 +17,7 @@ const ProfileTop = () => {
     >
       <Image
         style={styles.topImg}
-        source={require('../assets/prof.png')}
+        source={require('../../assets/prof.png')}
         resizeMode="contain"
       />
       <View>

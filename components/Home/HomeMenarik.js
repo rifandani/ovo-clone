@@ -2,9 +2,9 @@ import React, { useContext } from 'react';
 import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 import { Card } from 'react-native-paper';
 
-import Colors from '../constants/Colors';
-import { deviceHeight, deviceWidth } from '../constants/Dimensions';
-import { ThemeContext } from '../contexts/ThemeContext';
+import Colors from '../../constants/Colors';
+import { deviceHeight, deviceWidth } from '../../constants/Dimensions';
+import { ThemeContext } from '../../contexts/ThemeContext';
 
 const HomeMenarik = () => {
   const { isDarkMode } = useContext(ThemeContext);
@@ -41,7 +41,7 @@ const HomeMenarik = () => {
         >
           <Card.Cover
             style={styles.cover}
-            source={require('../assets/help.png')}
+            source={require('../../assets/help.png')}
             resizeMode="contain"
           />
           <Text
@@ -67,7 +67,7 @@ const HomeMenarik = () => {
         >
           <Card.Cover
             style={styles.cover}
-            source={require('../assets/covid.png')}
+            source={require('../../assets/covid.png')}
             resizeMode="contain"
           />
           <Text

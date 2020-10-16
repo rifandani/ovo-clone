@@ -2,21 +2,21 @@ import React, { useContext, useRef, useState } from 'react';
 import { StyleSheet, Text, View, TouchableOpacity, Image } from 'react-native';
 import Carousel from 'react-native-snap-carousel';
 
-import Colors from '../constants/Colors';
-import { deviceHeight, deviceWidth } from '../constants/Dimensions';
-import { ThemeContext } from '../contexts/ThemeContext';
+import Colors from '../../constants/Colors';
+import { deviceHeight, deviceWidth } from '../../constants/Dimensions';
+import { ThemeContext } from '../../contexts/ThemeContext';
 
 const data = [
   {
-    source: require('../assets/gear.png'),
+    source: require('../../assets/gear.png'),
     bgColor: Colors.warning,
   },
   {
-    source: require('../assets/arrow.png'),
+    source: require('../../assets/arrow.png'),
     bgColor: Colors.success,
   },
   {
-    source: require('../assets/chart.png'),
+    source: require('../../assets/chart.png'),
     bgColor: Colors.secondary,
   },
 ];

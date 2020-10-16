@@ -1,20 +1,21 @@
 import React, { useContext } from 'react';
 import { StyleSheet, ScrollView, View } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
-// files - components
+// files
 import { ThemeContext } from '../contexts/ThemeContext';
 import { deviceHeight } from '../constants/Dimensions';
 import Colors from '../constants/Colors';
 import Header from '../components/Header';
-import ProfileTop from '../components/ProfileTop';
-import ProfileListItem from '../components/ProfileListItem';
-import ProfileLoyalty from '../components/ProfileLoyalty';
-import ProfileAkun from '../components/ProfileAkun';
-import ProfileKeamanan from '../components/ProfileKeamanan';
-import ProfileTentang from '../components/ProfileTentang';
-import ProfileFooter from '../components/ProfileFooter';
+// components
+import ProfileTop from '../components/Profile/ProfileTop';
+import ProfileListItem from '../components/Profile/ProfileListItem';
+import ProfileLoyalty from '../components/Profile/ProfileLoyalty';
+import ProfileAkun from '../components/Profile/ProfileAkun';
+import ProfileKeamanan from '../components/Profile/ProfileKeamanan';
+import ProfileTentang from '../components/Profile/ProfileTentang';
+import ProfileFooter from '../components/Profile/ProfileFooter';
 
-export default function ProfileScreen({ navigator }) {
+export default function ProfileScreen() {
   const { isDarkMode } = useContext(ThemeContext);
 
   return (

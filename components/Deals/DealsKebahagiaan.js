@@ -3,13 +3,13 @@ import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 import { Card } from 'react-native-paper';
 import Carousel from 'react-native-snap-carousel';
 
-import Colors from '../constants/Colors';
-import { deviceHeight, deviceWidth } from '../constants/Dimensions';
-import { ThemeContext } from '../contexts/ThemeContext';
+import Colors from '../../constants/Colors';
+import { deviceHeight } from '../../constants/Dimensions';
+import { ThemeContext } from '../../contexts/ThemeContext';
 
 const data = [
   {
-    source: require('../assets/hotdog.png'),
+    source: require('../../assets/hotdog.png'),
     sourceBgColor: Colors.info,
     title: 'Voucher 100.000',
     subtitle: 'McDonalds',
@@ -17,7 +17,7 @@ const data = [
     price: '60.000',
   },
   {
-    source: require('../assets/burger.png'),
+    source: require('../../assets/burger.png'),
     sourceBgColor: Colors.secondary,
     title: 'Discount 40%',
     subtitle: 'Burger King',
@@ -25,7 +25,7 @@ const data = [
     price: '75.000',
   },
   {
-    source: require('../assets/pizza.png'),
+    source: require('../../assets/pizza.png'),
     sourceBgColor: Colors.success,
     title: 'Promo Paket Rendang',
     subtitle: 'Pizza Hut Delivery',

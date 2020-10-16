@@ -1,10 +1,10 @@
 import React, { useContext } from 'react';
-import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, View } from 'react-native';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 
-import Colors from '../constants/Colors';
-import { deviceHeight, deviceWidth } from '../constants/Dimensions';
-import { ThemeContext } from '../contexts/ThemeContext';
+import Colors from '../../constants/Colors';
+import { deviceHeight, deviceWidth } from '../../constants/Dimensions';
+import { ThemeContext } from '../../contexts/ThemeContext';
 
 const firstListData = [
   {

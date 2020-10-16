@@ -18,6 +18,10 @@ export default function Header({ title, backButton }) {
       style={{
         ...styles.header,
         justifyContent: backButton ? 'flex-start' : 'space-between',
+        paddingTop: backButton
+          ? Constants.statusBarHeight + 10
+          : Constants.statusBarHeight,
+        paddingBottom: backButton ? 5 : 10,
       }}
     >
       {backButton ? (
@@ -46,13 +50,10 @@ export default function Header({ title, backButton }) {
 const styles = StyleSheet.create({
   header: {
     backgroundColor: Colors.primary,
+    padding: 10,
+    paddingLeft: 5,
     paddingTop: Constants.statusBarHeight,
-    paddingLeft: 10,
-    paddingBottom: 10,
-    paddingRight: 10,
     flexDirection: 'row',
-    // borderBottomLeftRadius: 30,
-    // borderBottomRightRadius: 30,
   },
   leftButton: {},
   leftIcon: {

@@ -2,19 +2,19 @@ import React, { useContext } from 'react';
 import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native';
 import Swiper from 'react-native-swiper';
 
-import Colors from '../constants/Colors';
-import { deviceHeight, deviceWidth } from '../constants/Dimensions';
-import { ThemeContext } from '../contexts/ThemeContext';
+import Colors from '../../constants/Colors';
+import { deviceHeight, deviceWidth } from '../../constants/Dimensions';
+import { ThemeContext } from '../../contexts/ThemeContext';
 
 const promoData = [
   {
-    imgSource: require('../assets/promo1.png'),
+    imgSource: require('../../assets/promo1.png'),
   },
   {
-    imgSource: require('../assets/promo2.png'),
+    imgSource: require('../../assets/promo2.png'),
   },
   {
-    imgSource: require('../assets/promo3.png'),
+    imgSource: require('../../assets/promo3.png'),
   },
 ];
 

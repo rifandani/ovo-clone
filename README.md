@@ -1,11 +1,10 @@
-# ExpressJS Weather Finder
+# React Native - OVO Clone
 
 > Cloning OVO based on the mobile android app. Bootstraped using Expo CLI.
-> Bootstraped using Expo CLI.
 
 ## Demo
 
-Demo aplikasi dapat diakses dengan link berikut: [OVO Clone](https://agile-island-52063.herokuapp.com/)
+Demo aplikasi dapat diakses dengan link berikut: [OVO Clone](https://github.com/rifandani/ovo-clone/)
 
 ### Tech Stack
 
@@ -20,3 +19,6 @@ Demo aplikasi dapat diakses dengan link berikut: [OVO Clone](https://agile-islan
 - Intro slider
 - Snap carousel
 - Swiper
+- Tab View
+- Async Storage for the Cash System => Top Up dan Pembayaran Tagihan
+- Custom Input for Topup Cash with Validator.js
