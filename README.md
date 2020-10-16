@@ -4,7 +4,7 @@
 
 ## Demo
 
-Demo aplikasi dapat diakses dengan link berikut: [OVO Clone](https://github.com/rifandani/ovo-clone/)
+Demo aplikasi dapat diakses dengan link berikut: [OVO Clone](https://expo.io/@rifandani/projects/OVOClone)
 
 ### Tech Stack
 
